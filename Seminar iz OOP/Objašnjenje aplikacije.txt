@@ -1,0 +1,28 @@
+SEMINAR OPP (120) 2024
+
+Ovaj kod je primjer jednostavne Qt aplikacije napisane u programskom jeziku C++. 
+Aplikacija stvara glavni prozor s mogućnošću dodavanja i uklanjanja instanci QLabel-a na klik mišem. 
+Također uključuje osnovni izbornik za spremanje i otvaranje datoteka u prilagođenom formatu.
+
+Evo sažetka ključnih komponenti:
+
+    MyDialog klasa: Dijaloški okvir za unos novog teksta. Sadrži QLineEdit widget i gumbe za OK/Cancel.
+
+    MyMainWindow klasa: Glavni prozor aplikacije. Nasljeđuje od QMainWindow i uključuje vektor instanci QLabel-a. 
+
+
+Glavne značajke uključuju:
+
+        mousePressEvent: 	Obradjuje događaje klika mišem. Kada se lijevim gumbom klikne, otvara se MyDialog za unos novog teksta i stvara se nova QLabel 				s 				unesenim tekstom na mjestu klika. Kada se desnim gumbom klikne, uklanja se QLabel ako se kursor miša nalazi iznad njega.
+
+        paintEvent:	 	Crta liniju na dnu prozora i prikazuje tekst (stringove) iz QLabel instanci na prozoru.
+
+        FileSaveAsMenu: 	Sprema informacije o QLabel-ima u prilagođenu datotečnu strukturu (".fsb").
+
+        FileOpenMenu: 		Učitava informacije o QLabel-ima iz prilagođene datotečne strukture (".fsb") i ažurira prozor.
+
+    	main funkcija: 		Inicijalizira Qt aplikaciju, stvara instancu MyMainWindow i pokreće petlju aplikacije.
+
+
+
+Luka Flegar, 2.godina preddiplomskog sveučilišnog studija računarstvo(120)
